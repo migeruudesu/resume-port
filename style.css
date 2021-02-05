@@ -77,7 +77,10 @@ div,section{
 .brown_text{
   color: #745500;
 }
-
+.cardIconBg--grey{
+  background: rgb(92, 93, 95);
+  border-radius: .5rem;
+}
 /* <<---- start ---->> */
 header{
   position: fixed;
