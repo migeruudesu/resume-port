@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #232B3D;
+  background:linear-gradient(226.96deg, #8593AE 10.1%, #8593AE 43.83%, #142850 93.12%) no-repeat fixed center;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,29 +34,10 @@ div,section{
 }
 .con--shadow{
   max-width: 1000px;
-  background-color: #1e2941;
+  background-color: rgb(30, 41, 65,.8);
   border-radius: .5rem;
   box-shadow: 1px 2px 5px rgb(29, 32, 41);
   margin-top: 1rem;
-}
-.btn{
-  border-radius: 1rem;
-  border: 1.1px solid #f09a18;
-  background-color: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 1px 2px 3px rgb(37, 40, 48);
-  text-transform: uppercase;
-  transition: 100ms ease;
-  padding: .1rem;
-}
-.btn:hover{
-  border: .2px solid #f09a18;
-  background:rgb(37, 57, 71);
-  box-shadow:inset 1px 1px 3px #000000;
-  transform:scale(.9,.9);
-
 }
 
 .blue_text{
@@ -81,6 +63,25 @@ div,section{
   background: rgb(92, 93, 95);
   border-radius: .5rem;
 }
+.btn{
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  font-family: Courier New;
+  color: #ffffff;
+  /* font-size: 20px; */
+  background: transparent;
+  padding: 8px 15px;
+  border: solid #ff8c00 2px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn:hover{
+  transform: scale(1.05,1.05);
+  transition: 100ms ease-in-out;
+}
 /* <<---- start ---->> */
 header{
   position: fixed;
@@ -89,9 +90,8 @@ header{
   left: 0;
   margin-right: auto;
   margin-left: auto;
-  width: 95%;
-  top: 1vh;
-  background-color: transparent;
+  width: 100%;
+  background-color: #142850;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@ header.expand{
 .nav{
   max-width: 1200px;
   width: 100%;
-  height: 5vh;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,10 +129,7 @@ header.expand{
   justify-content: space-around;
   cursor: pointer;
 }
-.na__a{
-  font-size: .8rem;
-}
-.na__a:hover{
+.nav__anchor:hover{
   color: #2cace7;
 }
 .nav__link-01{
@@ -179,6 +176,7 @@ header.expand{
   justify-content: center;
   align-content: center;
   padding: .8rem 0;
+  font-size: 1rem;
 }
 .nav__ham--line{
   background-color: white;
@@ -187,21 +185,6 @@ header.expand{
   height: 3px;
   /* margin: 5% 0; */
 }
-.nav__li--btn-02{
-  width: auto;
-  font-weight: 700;
-  padding: .3rem .5rem;
-  border-radius: 1rem;
-  border: 1px solid #f09a18;
-  background-color: none;
-  box-shadow: none;
-}
-.nav__li--btn-02:hover{
-  border: .1px solid #f09a18;
-  background:rgb(37, 57, 71);
-  box-shadow:inset 1px 1px 3px #000000;
-}
-
 /* <---- nav ends here ----> */
 .home p{
   font-size: .8rem;
@@ -216,10 +199,11 @@ header.expand{
   font-size: 1.1em;
 }
 .home .dl_resume{
-  font-size: .8rem;
+  font-size: 1rem;
 }
+
 .home{
-  margin-top: 10vh;
+  margin-top: 6vh;
   width: 100%;
   height: auto;
   display: flex;
@@ -227,22 +211,23 @@ header.expand{
 }
 .home__content{
   width: 90%;
-  padding: 2rem .5rem;
+  height: 50vh;
+  /* padding: 2rem .5rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.resume__btn{
-  margin-top: 1rem;
-  width: 150px;
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-  padding: .2rem .5rem;
+  justify-content: center;
 }
 .dl_icon{
-  width: 30px;
+  width: 25px;
   height: auto;
+  margin-right: 10px;
+}
+.home__content--details p{
+  margin-top: 3px;
+}
+.resume__btn{
+  margin-top: 2%;
 }
 
 /* <---- home ends here ----> */
@@ -292,7 +277,7 @@ header.expand{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 95%;
+  width: 90%;
   padding: 1rem;
 }
 .card__content{
@@ -304,8 +289,7 @@ header.expand{
 }
 .wc__card-item{
   font-size: .7rem;
-  min-width: 250px;
-  max-width: 270px;
+  width: 270px;
   height: 300px;
   border-radius: .5rem;
   display: flex;
@@ -363,21 +347,21 @@ header.expand{
   box-shadow:inset 1px 1px 7px #172b3b;
 }
 /* card - button */
-.wc__card--button{
+.wc__card--btn--container{
   width: 100%;
   height: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: .5rem 1rem ;
+  padding: .5rem 1rem;
 }
 .wc__card--btn{
   display: flex;
-  width: 120px;
+  width: 100px;
   align-items: center;
   justify-content: center;
   height: auto;
-  font-size: .7rem;
+  font-size: .9rem;
 }
 .wc__card--btn:hover{
   transform:scale(.9,.9);
@@ -393,7 +377,7 @@ header.expand{
   
 }
 .contact__content{
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,7 +406,7 @@ header.expand{
 textarea{
   height: 7rem;
 }
-.f__btn{
+/* .f__btn{
   margin-top: 1rem;
   color:white;
   background: none;
@@ -433,7 +417,7 @@ textarea{
   align-items: center;
   justify-content: center;
   height: auto;
-}
+} */
 
 /* <---- contact ends here ----> */
 
@@ -445,7 +429,7 @@ textarea{
   margin-bottom: 2rem;
 }
 .footer__content{
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -477,9 +461,7 @@ textarea{
   text-align: center;
 }
 @media screen and (min-width: 480px){
-    .nav{
-      height: 6vh;
-    }
+  
     .nav{  
       padding: 0 10%;
     }
@@ -497,11 +479,9 @@ textarea{
     .home .h3_tag{
       font-size: 1.3em;
     }
-    .home .dl_resume{
-      font-size: 1rem;
-    }
     .home__content{
       padding:4rem 0;
+      height: 60vh;
     }
     .home__content--details{
       width: auto;
@@ -518,9 +498,6 @@ textarea{
 }
 
 @media screen and (min-width: 600px){
-    .nav{
-      height: 6vh;
-    }
     .nav__link--item-01{
       display: flex;
       justify-content: center;
@@ -534,31 +511,16 @@ textarea{
       margin-left: 1rem;
       align-self: center;
     }
-    .nav__li--btn-01{
-      width: auto;
-      font-weight: 700;
-      padding: .3rem .5rem;
-      border-radius: 1rem;
-      border: 1px solid #f09a18;
-      background-color: none;
-      box-shadow: none;
-    }
-    .nav__li--btn-01:hover{
-      border: .1px solid #f09a18;
-      background:rgb(37, 57, 71);
-      box-shadow:inset 1px 1px 3px #000000;
-    }
     .nav__hamburger{
       display: none;
     }
     .nav__link-02{
       display: none;
     }
-    
-/* <---- nav ends here ----> */
-    .home{
-      margin-top: 12vh;
+    .nav__anchor{
+      font-size: 1rem;
     }
+/* <---- nav ends here ----> */
     .home p{
       font-size: 1.1rem;
     }
@@ -614,7 +576,7 @@ textarea{
     .nav--logo{
       font-size: 1.5rem;
     }
-    .na__a{
+    .nav__anchor{
       font-size: 1rem;
     }
 /* <---- nav ends here ----> */    
@@ -653,6 +615,6 @@ textarea{
 }
 @media screen and (min-width: 1200px){
     .nav{
-      height: 7.5vh;
+      height: 7vh;
     }
 }
