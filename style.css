@@ -69,7 +69,7 @@ div,section{
   border-radius: 25px;
   font-family: Courier New;
   color: #ffffff;
-  /* font-size: 20px; */
+  font-size: 1rem;
   background: transparent;
   padding: 8px 15px;
   border: solid #ff8c00 2px;
@@ -81,6 +81,8 @@ div,section{
 .btn:hover{
   transform: scale(1.05,1.05);
   transition: 100ms ease-in-out;
+  background: rgb(255, 140, 0.2);
+  color: #ffffff;
 }
 /* <<---- start ---->> */
 header{
@@ -119,7 +121,7 @@ header.expand{
   width: auto;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
 }
 .nav__hamburger{
   width: auto;
@@ -129,8 +131,8 @@ header.expand{
   justify-content: space-around;
   cursor: pointer;
 }
-.nav__anchor:hover{
-  color: #2cace7;
+.nav__anchor{
+  font-size: 1.3rem;
 }
 .nav__link-01{
   display: none;
@@ -170,13 +172,16 @@ header.expand{
   border-radius: .5rem;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  text-transform: uppercase;
 }
 .nav__li--02{
+  text-align: center;
+  padding: .8rem 0;
+  font-size: 1.4rem;
+}
+.nav__li--btn-02{
   display: flex;
   justify-content: center;
-  align-content: center;
-  padding: .8rem 0;
-  font-size: 1rem;
 }
 .nav__ham--line{
   background-color: white;
@@ -352,8 +357,8 @@ header.expand{
   height: 20%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: .5rem 1rem;
+  justify-content: space-evenly;
+  padding: .5rem .5rem;
 }
 .wc__card--btn{
   display: flex;
@@ -361,7 +366,6 @@ header.expand{
   align-items: center;
   justify-content: center;
   height: auto;
-  font-size: .9rem;
 }
 .wc__card--btn:hover{
   transform:scale(.9,.9);
@@ -406,18 +410,9 @@ header.expand{
 textarea{
   height: 7rem;
 }
-/* .f__btn{
+.f__btn{
   margin-top: 1rem;
-  color:white;
-  background: none;
-  border: 1px solid #f09a18;
-  display: flex;
-  width: 120px;
-  padding: .4rem;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-} */
+}
 
 /* <---- contact ends here ----> */
 
@@ -498,28 +493,7 @@ textarea{
 }
 
 @media screen and (min-width: 600px){
-    .nav__link--item-01{
-      display: flex;
-      justify-content: center;
-      margin-right: .5rem;
-    }
-    .nav__link-01{
-      display: flex;
-      flex-direction: row;
-    }
-    .nav__li--01{
-      margin-left: 1rem;
-      align-self: center;
-    }
-    .nav__hamburger{
-      display: none;
-    }
-    .nav__link-02{
-      display: none;
-    }
-    .nav__anchor{
-      font-size: 1rem;
-    }
+
 /* <---- nav ends here ----> */
     .home p{
       font-size: 1.1rem;
@@ -570,23 +544,49 @@ textarea{
     }
 
 }
+@media screen and (min-width: 700px){
 
-@media screen and (min-width: 800px){
+}
 
-    .nav--logo{
-      font-size: 1.5rem;
-    }
-    .nav__anchor{
-      font-size: 1rem;
-    }
-/* <---- nav ends here ----> */    
-  .content--title{
-    width: 90%;
+@media screen and (min-width: 800px){  
+  header{  
+    background-color: rgb(20, 40, 80, .1);  
   }
-/* <---- about ends here ----> */    
-    .footer__content{
-      padding: 1.5rem 10%;
+  .nav__link-01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+  .nav__li--01{
+    color:black;
+    font-weight: 700;
+    align-self: center;
+  }
+  .nav__li--01:hover{
+    color: white;
+  }
+  .nav__link--item-01{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+  .nav__hamburger{
+    display: none;
+  }
+  .nav__link-02{
+    display: none;
+  }
+
+  /* <---- nav ends here ----> */    
+    .content--title{
+      width: 90%;
     }
+  /* <---- about ends here ----> */    
+      .footer__content{
+        padding: 1.5rem 10%;
+      }
 
 }
 
